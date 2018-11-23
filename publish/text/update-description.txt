@@ -1,0 +1,43 @@
+<en-US>
+New translation: Polish
+</en-US>
+
+<cs-CZ>
+Nový překlad: polsky
+</cs-CZ>
+
+<de-DE>
+Neue Übersetzung: Polnisch
+</de-DE>
+
+<es-ES>
+Nueva traducción: polaco
+</es-ES>
+
+<fr-FR>
+Nouvelle traduction: polonais
+</fr-FR>
+
+<it-IT>
+Nuova traduzione: polacco
+</it-IT>
+
+<nl-NL>
+Nieuwe vertaling: Pools
+</nl-NL>
+
+<ru-RU>
+Новый перевод: польский
+</ru-RU>
+
+<af>
+Nuwe vertaling: Pools
+</af>
+
+<pt-BR>
+Nova tradução: polonês
+</pt-BR>
+
+<pl-PL>
+Nowe tłumaczenie: polski
+</pl-PL>

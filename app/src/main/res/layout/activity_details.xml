@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailsview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!-- Header -->
+
+        <TextView
+            android:id="@+id/labelDetailsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Emociones del @android:string/dialog_alert_title"
+            android:textAllCaps="true"
+            android:textColor="#F5A9D0"
+            android:textSize="22sp"
+            tools:text="Emociones del día" />
+
+        <!-- Period yes/no -->
+
+        <TextView
+            android:id="@+id/labelPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:labelFor="@+id/periodOptions"
+            android:text="@string/label_details_period"
+            android:textAllCaps="true"
+            android:textColor="#F5A9D0"
+            android:textSize="18sp"
+            tools:text="Rrgistro de emocion" />
+
+        <RadioGroup
+            android:id="@+id/periodOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/periodYes"
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_details_yes"
+                android:textAllCaps="false"
+                android:textColor="#F5A9D0"
+                android:textSize="18sp"
+                tools:text="Si" />
+
+            <RadioButton
+                android:id="@+id/periodNo"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_details_no"
+                android:textAllCaps="false"
+                android:textColor="#F5A9D0"
+                android:textSize="18sp"
+                tools:text="No" />
+        </RadioGroup>
+
+        <!-- Period intensity -->
+
+        <TextView
+            android:id="@+id/labelPeriodIntensity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:labelFor="@+id/periodIntensity"
+            android:text="@string/label_details_intensity"
+            android:textAllCaps="true"
+            android:textColor="#F5A9D0"
+            android:textSize="18sp"
+            tools:text="Escala " />
+
+        <RadioGroup
+            android:id="@+id/periodIntensity"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/periodIntensity1"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_details_intensity1"
+                android:textAllCaps="false"
+                android:textColor="#F5A9D0"
+                android:textSize="18sp"
+                tools:text="Increible" />
+
+            <RadioButton
+                android:id="@+id/periodIntensity3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_details_intensity3"
+                android:textColor="#F5A9D0"
+                android:textSize="18sp"
+                tools:text="Regular" />
+
+            <RadioButton
+                android:id="@+id/periodIntensity2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_details_intensity2"
+                android:textColor="#F5A9D0"
+                android:textSize="18sp"
+                tools:text="Bueno" />
+
+            <RadioButton
+                android:id="@+id/periodIntensity4"
+                android:layout_width="122dp"
+                android:nextFocusRight="@+id/editNotes"
+                android:nextFocusDown="@+id/editNotes"
+                android:text="@string/label_details_intensity4"
+                android:textColor="#F5A9D0"
+                android:textSize="18sp"
+                tools:text="Muy Malo" />
+
+        </RadioGroup>
+
+        <!-- Notes -->
+
+        <TextView
+            android:id="@+id/labelNotes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:labelFor="@+id/editNotes"
+            android:text="@string/label_details_notes"
+            android:textAllCaps="true"
+            android:textColor="#F5A9D0"
+            android:textSize="18sp"
+            tools:text="Notas" />
+        <!-- Hack to avoid initial focus on edit widget -->
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:ignore="UselessLeaf" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/editNotes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:nextFocusLeft="@+id/periodIntensity4"
+            android:nextFocusUp="@+id/periodIntensity4"
+            android:textSize="18sp"
+            tools:ignore="LabelFor" />
+
+        <!-- Events -->
+
+        <TextView
+            android:id="@+id/labelEvents"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:labelFor="@+id/groupEvents"
+            android:text="@string/label_details_events"
+            android:textAllCaps="true"
+            android:textColor="#F5A9D0"
+            android:textSize="18sp"
+            tools:text="Eventos por recordar" />
+
+        <LinearLayout
+            android:id="@+id/groupEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+</ScrollView>
